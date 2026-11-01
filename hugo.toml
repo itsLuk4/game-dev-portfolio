@@ -1,4 +1,4 @@
-baseURL = 'https://itsLuk4.github.io/game-dev-portfolio/''
+baseURL = 'https://itsLuk4.github.io/game-dev-portfolio/'
 locale = 'en-US'
 title = 'Game Developer Portfolio'
 theme = 'loficode'
