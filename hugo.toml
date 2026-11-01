@@ -1,0 +1,92 @@
+baseURL = 'https://example.org/'
+locale = 'en-US'
+title = 'Game Developer Portfolio'
+theme = 'loficode'
+
+# Enable emoji support
+enableEmoji = true
+
+# Output formats for SPA functionality
+[outputs]
+  home = ["HTML", "JSON", "pages"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+# Custom output formats
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+  [outputFormats.pages]
+    mediaType = "application/json"
+    baseName = "pages"
+    isPlainText = true
+
+# Pagination
+[pagination]
+  pagerSize = 10
+  path = "page"
+
+[params]
+  description = 'Portfolio of a Game Developer & Game Designer'
+  tagline = 'Creating player experience and emotion'
+
+[params.ambient_sounds]
+  persist = true          
+  default_volume = 0.4    
+
+
+  # Profile section
+  [params.author]
+    name = 'Your Name'
+    image = 'images/profile.png'
+
+  # Social links - Supported: github, twitter, linkedin, email, mastodon, youtube, instagram, facebook
+  [params.social]
+    github = "https://github.com/itsLuk4"
+    linkedin = "https://www.linkedin.com/in/itsluk4-dev92"
+    email = "luka.zivko9@gmail.com"
+    steam = "https://steamcommunity.com/id/clawless92/"
+
+# Main navigation menu
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  name = "Game Design Documents"
+  url = "/categories/design-docs/"
+  weight = 20
+
+[[menu.main]]
+  name = "Game Projects"
+  url = "/categories/games/"
+  weight = 30
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 40
+
+# Markup configuration for syntax highlighting
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+    lineNumbersInTable = false
+    tabWidth = 2
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+  platform = "platforms"
+  engine = "engines"
+  genre = "genres"

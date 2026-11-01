@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Delivery-Dash on Game Developer Portfolio</title>
+		<link>http://localhost:1315/tags/delivery-dash/</link>
+		<description>Recent content in Delivery-Dash on Game Developer Portfolio</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1315/tags/delivery-dash/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Delivery Dash — Game Design Document</title>
+				<link>http://localhost:1315/posts/delivery-dash-gdd/</link>
+				<pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1315/posts/delivery-dash-gdd/</guid>
+				<description>&lt;h1 id=&#34;delivery-dash--game-design-document&#34;&gt;Delivery Dash — Game Design Document&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Status: &lt;strong&gt;Draft&lt;/strong&gt; — Work in progress&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;main-page&#34;&gt;Main Page&lt;/h2&gt;&#xA;&lt;h3 id=&#34;working-title&#34;&gt;Working Title&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Delivery Dash&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;current-status&#34;&gt;Current Status&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;In Development — Prototype Phase&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Core driving mechanics&lt;/strong&gt;: ✅ Implemented and playable&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Procedural city generation&lt;/strong&gt;: 🟡 MVP working, needs district variety&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Traffic AI&lt;/strong&gt;: 🟡 Basic behaviors working, needs personality types&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Delivery routing system&lt;/strong&gt;: 🟡 Functional, needs efficiency scoring&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Campaign levels&lt;/strong&gt;: ⏳ 0/20 designed&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Vehicle progression&lt;/strong&gt;: ⏳ Design complete, not implemented&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Daily challenge backend&lt;/strong&gt;: ⏳ Not started&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Blockers&lt;/strong&gt;: None critical. Art/VFX pipeline needed for visual feedback on drift/boost.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

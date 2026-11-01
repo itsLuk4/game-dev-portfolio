@@ -1,0 +1,106 @@
+{{ define "main" }}
+<div class="container">
+  {{ if .IsHome }}
+  <div class="author-profile-section">
+    <div class="profile-photo-container">
+      {{ with .Site.Params.author.image }}
+      <img
+        src="{{ . | absLangURL }}"
+        alt="{{ .Site.Params.author.name }}"
+        class="profile-photo"
+      />
+      {{ end }}
+    </div>
+    <p class="profile-tagline">{{ .Site.Params.tagline }}</p>
+    <div class="social-links">
+      {{ with .Site.Params.social.github }}
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+        title="GitHub"
+      >
+        <span class="social-icon">GH</span>
+      </a>
+      {{ end }}
+      {{ with .Site.Params.social.linkedin }}
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+        title="LinkedIn"
+      >
+        <span class="social-icon">IN</span>
+      </a>
+      {{ end }}
+      {{ with .Site.Params.social.twitter }}
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+        title="X (formerly Twitter)"
+      >
+        <span class="social-icon x-icon">𝕏</span>
+      </a>
+      {{ end }}
+      {{ with .Site.Params.social.email }}
+      <a
+        href="mailto:{{ . }}"
+        class="social-link"
+        title="Email"
+      >
+        <span class="social-icon">✉</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if .IsHome }}
+  <div class="filter-section">
+    <div class="filter-tags">
+      <div class="tag active" data-tag="all">All</div>
+      {{/* Define the main category tags to show as filters */}}
+      {{ $mainTags := slice "game" "design-doc" }}
+      {{ range $mainTags }}
+      <div class="tag" data-tag="{{ . }}">{{ . | title }}</div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="posts-list" id="posts-container">
+    {{ $posts := where .Site.RegularPages "Section" "eq" "posts" }}
+    {{ $postsPerPage := 9 }}
+    {{ range first $postsPerPage $posts }}
+      {{ partial "post-list-item.html" . }}
+    {{ end }}
+  </div>
+
+  {{ $posts := where .Site.RegularPages "Section" "eq" "posts" }}
+  {{ if gt (len $posts) 9 }}
+  <div class="load-more-section">
+    <button
+      id="load-more-btn"
+      class="load-more-btn"
+      data-loaded="9"
+      data-total="{{ len $posts }}"
+    >
+      <span class="load-more-text">Load More</span>
+      <span class="load-more-icon">☕</span>
+    </button>
+    <div class="load-more-loading" id="load-more-loading" style="display: none">
+      <span class="loading-text">Loading more...</span>
+      <div class="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

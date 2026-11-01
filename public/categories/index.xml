@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Categories on Game Developer Portfolio</title>
+		<link>http://localhost:1315/categories/</link>
+		<description>Recent content in Categories on Game Developer Portfolio</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1315/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Games</title>
+				<link>http://localhost:1315/categories/games/</link>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1315/categories/games/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Design-Docs</title>
+				<link>http://localhost:1315/categories/design-docs/</link>
+				<pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1315/categories/design-docs/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

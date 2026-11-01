@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Design Documents on Game Developer Portfolio</title>
+    <link>http://localhost:1313/design-docs/</link>
+    <description>Recent content in Design Documents on Game Developer Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/design-docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Time Echo System Design</title>
+      <link>http://localhost:1313/design-docs/time-echo-system/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/design-docs/time-echo-system/</guid>
+      <description>Technical design document for the Time Echo recording/playback system in Chronicles of Aether</description>
+    </item>
+    <item>
+      <title>Lumina Postmortem: Shipping a Solo Godot Game</title>
+      <link>http://localhost:1313/design-docs/lumina-postmortem/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/design-docs/lumina-postmortem/</guid>
+      <description>Postmortem of Lumina — what went right, what went wrong, and lessons learned</description>
+    </item>
+  </channel>
+</rss>

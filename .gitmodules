@@ -1,0 +1,6 @@
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod
+[submodule "themes/loficode"]
+	path = themes/loficode
+	url = https://github.com/madebydia/loficode-hugo-theme.git

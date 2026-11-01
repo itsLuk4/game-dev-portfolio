@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Portfolio on Game Developer Portfolio</title>
+		<link>http://localhost:1315/tags/portfolio/</link>
+		<description>Recent content in Portfolio on Game Developer Portfolio</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1315/tags/portfolio/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Delivery Dash</title>
+				<link>http://localhost:1315/posts/delivery-dash/</link>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1315/posts/delivery-dash/</guid>
+				<description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Delivery Dash&lt;/strong&gt; is a fast-paced arcade delivery game where players race through procedurally generated city streets, dodging traffic, navigating shortcuts, and managing their delivery route efficiency. Think &lt;em&gt;Crazy Taxi&lt;/em&gt; meets &lt;em&gt;Paperboy&lt;/em&gt; with a modern mobile-friendly control scheme.&lt;/p&gt;&#xA;&lt;h2 id=&#34;gallery&#34;&gt;Gallery&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;http://localhost:1315/images/DriverDash/DriveDash.gif&#34; alt=&#34;Gameplay 1&#34; width=&#34;650&#34;&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;img src=&#34;http://localhost:1315/images/DriverDash/DriveItem.gif&#34; alt=&#34;Gameplay 2&#34; width=&#34;650&#34;&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;p&gt;As &lt;strong&gt;Gameplay Programmer &amp;amp; Level Designer&lt;/strong&gt;, I:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Built the core driving physics with arcade handling (drift, boost, handbrake turns)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Arcade Driving Physics&lt;/strong&gt; — Drift, boost, jump, and powerslide through tight corners&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Route Optimization&lt;/strong&gt; — Plan the most efficient delivery path for bonus rewards&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Delivery packages&lt;/strong&gt; - Different packages to deliver to NPC&amp;rsquo;s&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;progress&#34;&gt;Progress&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✅ Core driving mechanics &amp;amp; physics&lt;/li&gt;&#xA;&lt;li&gt;✅ Package delivery and completion&lt;/li&gt;&#xA;&lt;li&gt;✅ Sounds effects&lt;/li&gt;&#xA;&lt;li&gt;✅ Particle effects for drift/boost/collision&lt;/li&gt;&#xA;&lt;li&gt;⏳ Polish, VFX, sound design&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Complete remaining level&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+			</item>
+			<item>
+				<title>False King 2D</title>
+				<link>http://localhost:1315/posts/false-king/</link>
+				<pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1315/posts/false-king/</guid>
+				<description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;False King 2D&lt;/strong&gt; is an arcade platformer where you play as the rightful heir — cursed by Lord Pigsturr, your arch‑nemesis, who turned the entire castle into mindless, aggressive pigs. Jump, dash, swing your hammer, collect diamonds, and survive traps to reclaim your castle and lift the curse.&lt;/p&gt;&#xA;&lt;h2 id=&#34;gallery&#34;&gt;Gallery&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;http://localhost:1315/images/FalseKing/Hero1.png&#34; alt=&#34;Gameplay 1&#34; width=&#34;650&#34;&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;img src=&#34;http://localhost:1315/images/FalseKing/Hero2.png&#34; alt=&#34;Gameplay 2&#34; width=&#34;650&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1315/images/FalseKing/Hero3.png&#34; alt=&#34;Gameplay 3&#34; width=&#34;650&#34;&gt;&#xA;&lt;h2 id=&#34;playable-demo&#34;&gt;Playable Demo&lt;/h2&gt;&#xA;&lt;p&gt;You can try the current build here: &lt;a href=&#34;https://itsluk4.github.io/False-King-Demo/False%20King%202D/False%20King%202D%20_betterVersion_/index.html&#34;&gt;False King 2D Demo&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
