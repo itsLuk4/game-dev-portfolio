@@ -1,16 +1,16 @@
-baseURL = 'https://itsLuk4.github.io/game-dev-portfolio/'
+baseURL = 'https://itsluk4.github.io/game-dev-portfolio/'
 locale = 'en-US'
 title = 'Game Developer Portfolio'
 theme = 'loficode'
 
-# Enable emoji support
 enableEmoji = true
 
 # Output formats for SPA functionality
 [outputs]
-  home = ["HTML", "JSON", "pages"]
+  home = ["HTML", "JSON"]
   page = ["HTML"]
-  section = ["HTML"]
+  section = ["HTML", "JSON"]
+  taxonomy = ["HTML", "JSON"]
 
 # Custom output formats
 [outputFormats]
@@ -35,7 +35,6 @@ enableEmoji = true
 [params.ambient_sounds]
   persist = true          
   default_volume = 0.4    
-
 
   # Profile section
   [params.author]

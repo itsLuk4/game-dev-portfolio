@@ -1,0 +1,84 @@
+<div class="ambient-bar">
+    <div class="ambient-controls">
+        <button class="mute-toggle muted" title="Toggle ambient sounds" aria-label="Toggle ambient sounds">
+            <span class="icon-glyph" aria-hidden="true">🔇</span>
+        </button>
+        <button class="ambient-icon" data-sound="coffee" title="Coffee Shop Ambience" aria-label="Coffee shop ambience">
+            <span class="icon-glyph" aria-hidden="true">☕</span>
+        </button>
+        <button class="ambient-icon" data-sound="chiptune" title="Chiptune" aria-label="Chiptune music">
+            <span class="icon-glyph" aria-hidden="true">🎮</span>
+        </button>
+    </div>
+
+    <div class="ambient-label"><--------------- Click Coffee or Gamepad to change ambient sound</div>
+
+    <button class="ambient-play-btn" id="play-coffee-btn" style="margin-top:0.5rem;padding:0.25rem 0.5rem;background:var(--accent-primary);color:var(--bg-primary);border:none;border-radius:4px;cursor:pointer;">Play Coffee Ambience</button>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // ---------- 1️⃣  Patch theme's sounds object to add chiptune ----------
+      // The theme's main.js defines a global `sounds` object (or `window.sounds`).
+      // We wait until it exists, then add the missing chiptune entry.
+      function patchSounds() {
+        if (window.sounds && !window.sounds.chiptune) {
+          window.sounds.chiptune = { name: "Chiptune", emoji: "🎮" };
+        } else if (typeof sounds !== 'undefined' && !sounds.chiptune) {
+          // Fallback if the theme uses a global `sounds` variable
+          sounds.chiptune = { name: "Chiptune", emoji: "🎮" };
+        }
+        // Also patch any `sounds` object that might be in a closure
+        // by trying to access the theme's internal variable via the coffee button's onclick handler
+        const coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
+        if (coffeeBtn && coffeeBtn.onclick) {
+          // The theme's click handler likely uses a `sounds` variable from its closure.
+          // We can't easily reach it, but we can monkey-patch the click handler of the chiptune button.
+        }
+      }
+
+      // Try patching immediately, then retry a few times (theme loads async)
+      let patchAttempts = 0;
+      const patchInterval = setInterval(() => {
+        patchSounds();
+        if (window.sounds?.chiptune || (typeof sounds !== 'undefined' && sounds.chiptune)) {
+          clearInterval(patchInterval);
+        } else if (++patchAttempts > 20) {
+          clearInterval(patchInterval);
+        }
+      }, 200);
+
+      // ---------- 2️⃣  Auto-try to start coffee after 1s (may be blocked) ----------
+      setTimeout(function() {
+        var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
+        if (coffeeBtn) coffeeBtn.click();
+      }, 1000);
+
+      // ---------- 3️⃣  Fallback "Play Coffee Ambience" button ----------
+      var playBtn = document.getElementById('play-coffee-btn');
+      if (playBtn) {
+        playBtn.addEventListener('click', function() {
+          var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
+          if (coffeeBtn) coffeeBtn.click();
+        });
+      }
+
+      // ---------- 4️⃣  First user interaction → start coffee ----------
+      var coffeeStarted = false;
+      function startCoffeeOnInteraction() {
+        if (coffeeStarted) return;
+        coffeeStarted = true;
+        var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
+        if (coffeeBtn) coffeeBtn.click();
+        // Remove listeners after first interaction
+        document.removeEventListener('click', startCoffeeOnInteraction);
+        document.removeEventListener('keydown', startCoffeeOnInteraction);
+        document.removeEventListener('touchstart', startCoffeeOnInteraction);
+        document.removeEventListener('scroll', startCoffeeOnInteraction);
+      }
+      document.addEventListener('click', startCoffeeOnInteraction);
+      document.addEventListener('keydown', startCoffeeOnInteraction);
+      document.addEventListener('touchstart', startCoffeeOnInteraction);
+      document.addEventListener('scroll', startCoffeeOnInteraction);
+    });
+    </script>
+</div>
