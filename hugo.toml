@@ -1,18 +1,16 @@
-baseURL = 'https://itsluk4.github.io/game-dev-portfolio/'
-locale = 'en-US'
-title = 'Game Developer Portfolio'
-theme = 'loficode'
+baseURL = "https://itsluk4.github.io/game-dev-portfolio/"
+locale = "en-US"
+title = "Game Developer Portfolio"
+theme = "loficode"
 
 enableEmoji = true
 
-# Output formats for SPA functionality
 [outputs]
   home = ["HTML", "JSON"]
   page = ["HTML"]
   section = ["HTML", "JSON"]
   taxonomy = ["HTML", "JSON"]
 
-# Custom output formats
 [outputFormats]
   [outputFormats.JSON]
     mediaType = "application/json"
@@ -23,32 +21,28 @@ enableEmoji = true
     baseName = "pages"
     isPlainText = true
 
-# Pagination
 [pagination]
   pagerSize = 10
   path = "page"
 
 [params]
-  description = 'Portfolio of a Game Developer & Game Designer'
-  tagline = 'Creating player experience and emotion'
+  description = "Portfolio of a Game Developer & Designer"
+  tagline = "Creating player experience and emotion"
 
 [params.ambient_sounds]
-  persist = true          
-  default_volume = 0.4    
+  persist = true
+  default_volume = 0.4
 
-  # Profile section
-  [params.author]
-    name = 'Your Name'
-    image = 'images/profile.png'
+[params.author]
+  name = "Your Name"
+  image = "images/profile.png"
 
-  # Social links - Supported: github, twitter, linkedin, email, mastodon, youtube, instagram, facebook
-  [params.social]
-    github = "https://github.com/itsLuk4"
-    linkedin = "https://www.linkedin.com/in/itsluk4-dev92"
-    email = "luka.zivko9@gmail.com"
-    steam = "https://steamcommunity.com/id/clawless92/"
+[params.social]
+  github = "https://github.com/itsLuk4"
+  linkedin = "https://www.linkedin.com/in/itsluk4-dev92"
+  email = "luka.zivko9@gmail.com"
+  steam = "https://steamcommunity.com/id/clawless92/"
 
-# Main navigation menu
 [[menu.main]]
   name = "About"
   url = "/about/"
@@ -69,7 +63,6 @@ enableEmoji = true
   url = "/contact/"
   weight = 40
 
-# Markup configuration for syntax highlighting
 [markup]
   [markup.highlight]
     style = "dracula"
@@ -81,7 +74,6 @@ enableEmoji = true
     [markup.goldmark.renderer]
       unsafe = true
 
-# Taxonomies
 [taxonomies]
   tag = "tags"
   category = "categories"
