@@ -8,7 +8,7 @@ tags: ["game", "portfolio", "unity", "arcade", "racing", "casual"]
 categories: ["games"]
 featured: true
 mood: "🚀 In Development"
-coverImage: "/images/delivery-dash-cover.jpg"
+coverImage: "images/delivery-dash-cover.jpg"
 platform: ["PC", "Mobile"]
 engine: "Unity"
 genre: ["Arcade", "Racing", "Casual"]
@@ -28,9 +28,9 @@ github: ""
 
 | | |
 |:---:|:---:|
-<img src="/images/DriverDash/DriveDash.gif" alt="Gameplay 1" width="650"> 
+<img src="/game-dev-portfolio/images/DriverDash/DriveDash.gif" alt="Gameplay 1" width="650"> 
 
-<img src="/images/DriverDash/DriveItem.gif" alt="Gameplay 2" width="650">
+<img src="/game-dev-portfolio/images/DriverDash/DriveItem.gif" alt="Gameplay 2" width="650">
 
 ## My Role
 

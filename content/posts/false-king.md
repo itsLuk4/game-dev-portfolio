@@ -8,7 +8,7 @@ tags: ["game", "portfolio", "platform", "arcade", "2d"]
 categories: ["games"]
 featured: true
 mood: "🏰 Complete"
-coverImage: "/images/FalseKing/Hero1.png"
+coverImage: "images/FalseKing/Hero1.png"
 platform: ["PC", "Web"]
 engine: "Unity"
 genre: ["Platformer", "Arcade"]
@@ -28,11 +28,11 @@ github: ""
 
 | | | |
 |:---:|:---:|:---:|
-| <img src="/images/FalseKing/Hero1.png" alt="Gameplay 1" width="650"> 
+| <img src="/game-dev-portfolio/images/FalseKing/Hero1.png" alt="Gameplay 1" width="650"> 
 
-<img src="/images/FalseKing/Hero2.png" alt="Gameplay 2" width="650">
+<img src="/game-dev-portfolio/images/FalseKing/Hero2.png" alt="Gameplay 2" width="650">
 
-<img src="/images/FalseKing/Hero3.png" alt="Gameplay 3" width="650">
+<img src="/game-dev-portfolio/images/FalseKing/Hero3.png" alt="Gameplay 3" width="650">
 
 ## Playable Demo
 

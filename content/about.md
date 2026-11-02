@@ -40,7 +40,7 @@ I take care of two rescue cats, Nyx and Styx. They keep me company during late�
 
 | | |
 |:---:|:---:|
-| <img src="/game-dev-portfolio/images/Cats/GirlCat1.png" alt="Nyx" width="450"> <img src="/images/Cats/CatBoy1.png" alt="Styx" width="450">
+| <img src="/game-dev-portfolio/images/Cats/GirlCat1.png" alt="Nyx" width="450"> <img src="/game-dev-portfolio/images/Cats/CatBoy1.png" alt="Styx" width="450">
 
 ### 🥋 Kendo — Hungary Cup 1st Place
 Competitive Kendo practitioner; won 1st place at the Hungary Cup.
@@ -54,9 +54,9 @@ I paint tabletop miniatures — each piece shown from two angles.
 
 | | |
 |:---:|:---:|
-| <img src="/game-dev-portfolio/images/Miniatures/goblin1.png" alt="Goblin front" width="200"> | <img src="/images/Miniatures/goblin2.png" alt="Goblin back" width="200"> |
-| <img src="/game-dev-portfolio/images/Miniatures/Mage1.png" alt="Mage front" width="200"> | <img src="/images/Miniatures/Mage2.png" alt="Mage back" width="200"> |
-| <img src="/game-dev-portfolio/images/Miniatures/Warrior1.png" alt="Warrior front" width="200"> | <img src="/images/Miniatures/Warrior2.png" alt="Warrior back" width="200"> |
+| <img src="/game-dev-portfolio/images/Miniatures/goblin1.png" alt="Goblin front" width="200"> | <img src="/game-dev-portfolio/images/Miniatures/goblin2.png" alt="Goblin back" width="200"> |
+| <img src="/game-dev-portfolio/images/Miniatures/Mage1.png" alt="Mage front" width="200"> | <img src="/game-dev-portfolio/images/Miniatures/Mage2.png" alt="Mage back" width="200"> |
+| <img src="/game-dev-portfolio/images/Miniatures/Warrior1.png" alt="Warrior front" width="200"> | <img src="/game-dev-portfolio/images/Miniatures/Warrior2.png" alt="Warrior back" width="200"> |
 
 ### 👨‍🚒 Volunteer at a Local Fire Department 
 
