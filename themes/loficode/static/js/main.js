@@ -811,7 +811,7 @@
 
     showLoadingState(soundType);
 
-    const audio = new Audio(`/audio/${soundType}.mp3`);
+    const audio = new Audio(`/game-dev-portfolio/audio/${soundType}.mp3`);
     audio.loop = true;
     audio.volume = volumeSlider ? volumeSlider.value : 0.3;
 
