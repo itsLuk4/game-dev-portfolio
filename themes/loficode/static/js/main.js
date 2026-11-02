@@ -104,10 +104,9 @@
 
   // Sound data
   const sounds = {
-    coffee: { name: "Coffee Shop Ambience", emoji: "☕" },
-    rain: { name: "Gentle Rain", emoji: "🌧️" },
-    fireplace: { name: "Crackling Fireplace", emoji: "🔥" },
-  };
+  coffee: { name: "Coffee Shop Ambience", emoji: "☕" },
+  chiptune: { name: "Chiptune Music", emoji: "🎮" },
+};
 
   function updateAmbientState() {
     if (!muteToggle || !ambientLabel || !equalizer) return;
@@ -144,7 +143,7 @@
     }
 
     try {
-      const audio = new Audio(`/audio/${soundType}.mp3`);
+      const audio = new Audio(`/game-dev-portfolio/audio/${soundType}.mp3`);
       audio.loop = true;
       audio.volume = volumeSlider ? volumeSlider.value : 0.3;
 
