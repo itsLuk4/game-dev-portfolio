@@ -10,14 +10,14 @@
 <div class="cards-grid">
   {{ range $pages }}
     {{ if not .Draft }}
-      {{ $image := .Params.coverImage | default "/images/placeholder.png" }}
+      {{ $image := .Params.coverImage | default "images/placeholder.png" }}
       {{ $description := .Description | default .Summary | default "" }}
       {{ $url := .RelPermalink }}
 
       <article class="card">
         {{ if $image }}
           <a href="{{ $url }}" class="card-image-link">
-            <img src="{{ $image }}" alt="{{ .Title }}" loading="lazy" class="card-image" />
+            <img src="{{ $image | relURL }}" alt="{{ .Title }}" loading="lazy" class="card-image" />
           </a>
         {{ end }}
         <div class="card-content">
