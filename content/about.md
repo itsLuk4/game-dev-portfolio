@@ -54,7 +54,7 @@ I paint tabletop miniatures — each piece shown from two angles.
 
 | | |
 |:---:|:---:|
-| <img src="/images/Miniatures/goblin1.png" alt="Goblin front" width="200"> | <img src="/images/Miniatures/goblin2.png" alt="Goblin back" width="200"> |
+| <img src="game-dev-portfolio/images/Miniatures/goblin1.png" alt="Goblin front" width="200"> | <img src="/images/Miniatures/goblin2.png" alt="Goblin back" width="200"> |
 | <img src="/images/Miniatures/Mage1.png" alt="Mage front" width="200"> | <img src="/images/Miniatures/Mage2.png" alt="Mage back" width="200"> |
 | <img src="/images/Miniatures/Warrior1.png" alt="Warrior front" width="200"> | <img src="/images/Miniatures/Warrior2.png" alt="Warrior back" width="200"> |
 
