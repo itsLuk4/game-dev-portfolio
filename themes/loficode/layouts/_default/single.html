@@ -40,7 +40,7 @@
                 {{ if .Params.tags }}
                 <div class="post-tags-header">
                     {{ range .Params.tags }}
-                    <a href="{{ "/tags/" | absLangURL }}{{ . | urlize }}" class="post-tag">{{ . }}</a>
+                    <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" class="post-tag">{{ . }}</a>
                     {{ end }}
                 </div>
                 {{ end }}
