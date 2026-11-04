@@ -286,6 +286,60 @@
 
   // Initialize ambient state
   updateAmbientState();
+    // Remember the ambient sound between pages (per browser tab)
+  function saveAudioState() {
+    try {
+      const audio = currentSound ? audioElements[currentSound] : null;
+      if (!audio) {
+        sessionStorage.removeItem("ambientState");
+        return;
+      }
+      sessionStorage.setItem(
+        "ambientState",
+        JSON.stringify({
+          sound: currentSound,
+          time: audio.currentTime,
+          playing: isPlaying,
+        })
+      );
+    } catch (e) {
+      console.log("Could not save audio state:", e);
+    }
+  }
+
+  async function restoreAudioState() {
+    let saved = null;
+    try {
+      saved = JSON.parse(sessionStorage.getItem("ambientState"));
+    } catch (e) {
+      return;
+    }
+    if (!saved || !sounds[saved.sound]) return;
+
+    currentSound = saved.sound;
+
+    try {
+      const audio = await loadSound(saved.sound);
+      if (!audio) return;
+      audio.currentTime = saved.time || 0;
+
+      if (saved.playing) {
+        await audio.play();
+        isPlaying = true;
+        const icon = document.querySelector(`[data-sound="${saved.sound}"]`);
+        if (icon) icon.classList.add("active");
+      }
+    } catch (e) {
+      // The browser may block autoplay; the play button still works
+      console.log("Could not resume audio automatically:", e);
+      isPlaying = false;
+    }
+
+    updateAmbientState();
+  }
+
+  window.addEventListener("pagehide", saveAudioState);
+  restoreAudioState();
 
   // Copy code functionality for shortcodes
   document.querySelectorAll(".copy-btn").forEach((btn) => {
