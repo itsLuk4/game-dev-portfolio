@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Driver-Dash on Game Developer Portfolio</title>
-		<link>http://localhost:1315/tags/driver-dash/</link>
+		<link>http://localhost:1313/game-dev-portfolio/tags/driver-dash/</link>
 		<description>Recent content in Driver-Dash on Game Developer Portfolio</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1315/tags/driver-dash/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/game-dev-portfolio/tags/driver-dash/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Driver Dash — Game Design Document</title>
-				<link>http://localhost:1315/posts/driver-dash-gdd/</link>
+				<link>http://localhost:1313/game-dev-portfolio/posts/driver-dash-gdd/</link>
 				<pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1315/posts/driver-dash-gdd/</guid>
+				<guid>http://localhost:1313/game-dev-portfolio/posts/driver-dash-gdd/</guid>
 				<description>&lt;h1 id=&#34;driver-dash--game-design-document&#34;&gt;Driver Dash — Game Design Document&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Status: &lt;strong&gt;Concept Complete&lt;/strong&gt; — Ready for prototyping&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;game-design-concept&#34;&gt;Game Design Concept&lt;/h2&gt;&#xA;&lt;h3 id=&#34;working-title&#34;&gt;Working Title&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Driver Dash&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;concept-statement&#34;&gt;Concept Statement&lt;/h3&gt;&#xA;&lt;p&gt;A fast-paced arcade driving game with smooth drifting, boost mechanics, item pickups, and cargo that changes how you drive.&lt;/p&gt;&#xA;&lt;h3 id=&#34;genre&#34;&gt;Genre&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Arcade / Driving&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;target-audience&#34;&gt;Target Audience&lt;/h3&gt;&#xA;&lt;p&gt;Players who enjoy short arcade sessions. Any age and gender.&lt;/p&gt;&#xA;&lt;h3 id=&#34;unique-selling-points&#34;&gt;Unique Selling Points&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Cargo&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Mechanic&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Effect&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;Pizza&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Cools over time&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Goes cold if you take too long&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;Ice Cream&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Melts with heat&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Melts &lt;em&gt;faster&lt;/em&gt; when you boost&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;Hamburger&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Quality degrades on impact&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Gets worse every collision&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;strong&gt;Core Mechanics:&lt;/strong&gt; Drift, boost, item pickups, smooth arcade driving, fun drift noises.&lt;/p&gt;</description>
 			</item>
 	</channel>

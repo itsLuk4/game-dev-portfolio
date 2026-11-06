@@ -63,6 +63,3 @@ I paint tabletop miniatures — each piece shown from two angles.
 Participation in practice sessions, meetings, and various tasks and assistance related to the club.
 <img src="/game-dev-portfolio/images/Firefighter/Firefighter1.png" alt="Firefighter" width="350">
 
----
-
-*Open to collaboration, freelance work, and interesting conversations about game design. [Get in touch](/contact/)*

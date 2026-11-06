@@ -2,20 +2,24 @@
 <!-- Full-screen post layout to match SPA overlay -->
 <div class="post-overlay active">
     <div class="post-overlay-backdrop"></div>
+    {{ if and .Params.coverImage (eq .Params.coverStyle "background") }}
+    <div class="post-overlay-content has-background-cover" style="position: relative; min-height: 100vh; padding: 0; transform: translateY(0); background-image: url('{{ .Params.coverImage | absURL }}'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+    {{ else }}
     <div class="post-overlay-content" style="position: relative; min-height: 100vh; padding: 0; transform: translateY(0);">
+    {{ end }}
         <div class="post-overlay-header">
             <div class="post-overlay-title">
                 <a href="{{ .Site.Home.RelPermalink }}" class="overlay-site-title">{{ .Site.Title }}</a>
             </div>
-            <button class="post-overlay-close" aria-label="Close post" onclick="window.location.href='/'">
+            <button class="post-overlay-close" aria-label="Close post" onclick="goBack()">
                 <span aria-hidden="true">×</span>
             </button>
         </div>
         <div class="post-layout">
         <article class="post-content">
             <header class="post-header">
+                {{ if .ReadingTime }}
                 <div class="post-meta">
-                    <span class="post-date">{{ .Date.Format "2006.01.02" }}</span>
                     <div class="reading-time-post">
                         <span class="coffee-cups">
                             {{ $coffees := "" }}
@@ -32,6 +36,7 @@
                         <span>{{ .ReadingTime }} min read</span>
                     </div>
                 </div>
+                {{ end }}
                 <h1 class="post-title">{{ .Title }}</h1>
                 {{ if .Params.subtitle }}
                 <p class="post-subtitle">{{ .Params.subtitle }}</p>
@@ -45,6 +50,13 @@
                 </div>
                 {{ end }}
             </header>
+            {{ if .Params.coverImage }}
+            {{ if not (eq .Params.coverStyle "background") }}
+            <div class="post-cover-image">
+                <img src="{{ .Params.coverImage | absURL }}" alt="{{ .Title }} cover image" loading="lazy">
+            </div>
+            {{ end }}
+            {{ end }}
             <div class="post-body">
                 {{ .Content }}
             </div>
@@ -58,13 +70,15 @@
                     <div class="related-post">
                         <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                         <div class="related-meta">
-                            {{ .Date.Format "2006.01.02" }} •
+                            {{ if .Date }}{{ .Date.Format "2006.01.02" }} • {{ end }}
+                            {{ if .ReadingTime }}
                             {{ $coffees := "" }}
                             {{ $maxCups := 5 }}
                             {{ $cupsToShow := .ReadingTime }}
                             {{ if gt .ReadingTime $maxCups }}{{ $cupsToShow = $maxCups }}{{ end }}
                             {{ range (seq $cupsToShow) }}{{ $coffees = print $coffees "☕" }}{{ end }}
                             {{ $coffees }} {{ .ReadingTime }} min read
+                            {{ end }}
                         </div>
                     </div>
                     {{ end }}
@@ -72,7 +86,8 @@
             </div>
             {{ end }}
 
-            <!-- Post Navigation (Prev/Next) -->
+            <!-- Post Navigation (Prev/Next) - only for posts in a section -->
+            {{ if and .PrevInSection .NextInSection }}
             <nav class="post-navigation">
                 {{ with .PrevInSection }}
                 <div class="nav-previous">
@@ -92,6 +107,7 @@
                 <div></div>
                 {{ end }}
             </nav>
+            {{ end }}
         </article>
 
         <aside class="sidebar">
@@ -105,4 +121,26 @@
         </div>
     </div>
 </div>
+
+<script>
+function goBack() {
+    // Check if we have history to go back to
+    if (window.history.length > 1) {
+        // Check if referrer is from the same origin
+        const referrer = document.referrer;
+        const currentOrigin = window.location.origin;
+
+        if (referrer && referrer.startsWith(currentOrigin)) {
+            // We came from within the same site, go back
+            window.history.back();
+        } else {
+            // We came from external or direct access, go to home
+            window.location.href = '{{ .Site.Home.RelPermalink }}';
+        }
+    } else {
+        // No history, go to home
+        window.location.href = '{{ .Site.Home.RelPermalink }}';
+    }
+}
+</script>
 {{ end }}

@@ -9,6 +9,7 @@ categories: ["games"]
 featured: true
 mood: "🏰 Complete"
 coverImage: "images/FalseKing/Hero1.png"
+coverStyle: "background"
 platform: ["PC", "Web"]
 engine: "Unity"
 genre: ["Platformer", "Arcade"]
@@ -80,5 +81,3 @@ As **Gameplay Programmer & Designer**, I:
 - [Game Design Document](/categories/design-docs/false-king-gdd/) — *Concept complete*
 
 ---
-
-*Last updated: {{ .Date.Format "2006-01-02" }}*

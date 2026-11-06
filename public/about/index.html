@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1315&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/game-dev-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=game-dev-portfolio/livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>
@@ -25,7 +25,7 @@
   property="og:type"
   content="article"
 />
-<meta property="og:url" content="http://localhost:1315/about/" />
+<meta property="og:url" content="http://localhost:1313/game-dev-portfolio/about/" />
 <meta property="og:site_name" content="Game Developer Portfolio" />
 
 
@@ -40,7 +40,7 @@
 />
 
 
-<link rel="stylesheet" href="http://localhost:1315/css/style.css">
+<link rel="stylesheet" href="http://localhost:1313/game-dev-portfolio/css/style.css">
 
 
 
@@ -54,24 +54,29 @@
     <header class="site-header">
     <nav>
         <div class="nav-left">
-            <a href="http://localhost:1315/" class="logo">Game Developer Portfolio</a>
+            <a href="/game-dev-portfolio/" class="logo">Game Developer Portfolio</a>
         </div>
 
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             
-            <a href="http://localhost:1315/about/" class="nav-link">About</a>
+            <a href="http://localhost:1313/game-dev-portfolio/about/" class="nav-link">About</a>
             
-            <a href="http://localhost:1315/categories/design-docs/" class="nav-link">Game Design Documents</a>
+            <a href="http://localhost:1313/game-dev-portfolio/categories/design-docs/" class="nav-link">Game Design Documents</a>
             
-            <a href="http://localhost:1315/categories/games/" class="nav-link">Game Projects</a>
+            <a href="http://localhost:1313/game-dev-portfolio/categories/games/" class="nav-link">Game Projects</a>
             
-            <a href="http://localhost:1315/contact/" class="nav-link">Contact</a>
+            <a href="http://localhost:1313/game-dev-portfolio/contact/" class="nav-link">Contact</a>
             
         </div>
 
         <div class="header-controls">
             <button class="search-toggle" title="Search posts" aria-label="Search posts">🔍</button>
             <button class="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+            <button class="mobile-menu-toggle" title="Toggle menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </nav>
 
@@ -99,20 +104,22 @@
 
 <div class="post-overlay active">
     <div class="post-overlay-backdrop"></div>
+    
     <div class="post-overlay-content" style="position: relative; min-height: 100vh; padding: 0; transform: translateY(0);">
+    
         <div class="post-overlay-header">
             <div class="post-overlay-title">
-                <a href="/" class="overlay-site-title">Game Developer Portfolio</a>
+                <a href="/game-dev-portfolio/" class="overlay-site-title">Game Developer Portfolio</a>
             </div>
-            <button class="post-overlay-close" aria-label="Close post" onclick="window.location.href='/'">
+            <button class="post-overlay-close" aria-label="Close post" onclick="goBack()">
                 <span aria-hidden="true">×</span>
             </button>
         </div>
         <div class="post-layout">
         <article class="post-content">
             <header class="post-header">
+                
                 <div class="post-meta">
-                    <span class="post-date">0001.01.01</span>
                     <div class="reading-time-post">
                         <span class="coffee-cups">
                             
@@ -129,11 +136,13 @@
                         <span>2 min read</span>
                     </div>
                 </div>
+                
                 <h1 class="post-title">About</h1>
                 
 
                 
             </header>
+            
             <div class="post-body">
                 <h1 id="about-me">About Me</h1>
 <p>Hi! I&rsquo;m <strong>Luka</strong>, a passionate <strong>Game Developer &amp; Designer</strong>. I am new to the industry and have a burning passion to start my career.</p>
@@ -171,7 +180,7 @@ etc.</li>
 	</thead>
 	<tbody>
 			<tr>
-					<td style="text-align: center"><img src="/images/Cats/GirlCat1.jpg" alt="Nyx" width="450"> <img src="/images/Cats/CatBoy1.jpg" alt="Styx" width="450"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Cats/GirlCat1.png" alt="Nyx" width="450"> <img src="/game-dev-portfolio/images/Cats/CatBoy1.png" alt="Styx" width="450"></td>
 					<td></td>
 			</tr>
 	</tbody>
@@ -186,7 +195,7 @@ etc.</li>
 	</thead>
 	<tbody>
 			<tr>
-					<td style="text-align: center"><img src="/images/Kendo/KendoGoldMedal.png" alt="Kendo Victory" width="450"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Kendo/KendoGoldMedal.png" alt="Kendo Victory" width="450"></td>
 			</tr>
 	</tbody>
 </table>
@@ -201,24 +210,22 @@ etc.</li>
 	</thead>
 	<tbody>
 			<tr>
-					<td style="text-align: center"><img src="/images/Miniatures/goblin1.jpg" alt="Goblin front" width="200"></td>
-					<td style="text-align: center"><img src="/images/Miniatures/goblin2.jpg" alt="Goblin back" width="200"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Miniatures/Goblin1.png" alt="Goblin front" width="200"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Miniatures/Goblin2.png" alt="Goblin back" width="200"></td>
 			</tr>
 			<tr>
-					<td style="text-align: center"><img src="/images/Miniatures/Mage1.jpg" alt="Mage front" width="200"></td>
-					<td style="text-align: center"><img src="/images/Miniatures/Mage2.jpg" alt="Mage back" width="200"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Miniatures/Mage1.png" alt="Mage front" width="200"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Miniatures/Mage2.png" alt="Mage back" width="200"></td>
 			</tr>
 			<tr>
-					<td style="text-align: center"><img src="/images/Miniatures/Warrior1.jpg" alt="Warrior front" width="200"></td>
-					<td style="text-align: center"><img src="/images/Miniatures/Warrior2.jpg" alt="Warrior back" width="200"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Miniatures/Warrior1.png" alt="Warrior front" width="200"></td>
+					<td style="text-align: center"><img src="/game-dev-portfolio/images/Miniatures/Warrior2.png" alt="Warrior back" width="200"></td>
 			</tr>
 	</tbody>
 </table>
 <h3 id="-volunteer-at-a-local-fire-department">👨‍🚒 Volunteer at a Local Fire Department</h3>
 <p>Participation in practice sessions, meetings, and various tasks and assistance related to the club.
-<img src="/images/Firefighter/Firefighter1.png" alt="Firefighter" width="350"></p>
-<hr>
-<p><em>Open to collaboration, freelance work, and interesting conversations about game design. <a href="/contact/">Get in touch</a></em></p>
+<img src="/game-dev-portfolio/images/Firefighter/Firefighter1.png" alt="Firefighter" width="350"></p>
 
             </div>
 
@@ -226,18 +233,7 @@ etc.</li>
             
 
             
-            <nav class="post-navigation">
-                
-                <div class="nav-previous">
-                    <span class="nav-label">← Previous</span>
-                    <a href="http://localhost:1315/contact/" class="nav-title">Contact</a>
-                </div>
-                
-
-                
-                <div></div>
-                
-            </nav>
+            
         </article>
 
         <aside class="sidebar">
@@ -252,63 +248,46 @@ etc.</li>
     </div>
 </div>
 
+<script>
+function goBack() {
+    
+    if (window.history.length > 1) {
+        
+        const referrer = document.referrer;
+        const currentOrigin = window.location.origin;
+
+        if (referrer && referrer.startsWith(currentOrigin)) {
+            
+            window.history.back();
+        } else {
+            
+            window.location.href = '\/game-dev-portfolio\/';
+        }
+    } else {
+        
+        window.location.href = '\/game-dev-portfolio\/';
+    }
+}
+</script>
+
     </main>
 
-    
     <div class="ambient-bar">
     <div class="ambient-controls">
         <button class="mute-toggle muted" title="Toggle ambient sounds" aria-label="Toggle ambient sounds">
             <span class="icon-glyph" aria-hidden="true">🔇</span>
         </button>
-        <button class="ambient-icon" data-sound="coffee" title="Coffee Shop Ambience" aria-label="Coffee shop ambience">
+        <button class="ambient-icon" data-sound="coffee" title="Coffee Shop Ambience — Calm, cozy background" aria-label="Coffee shop ambience (calm)">
             <span class="icon-glyph" aria-hidden="true">☕</span>
         </button>
-        <button class="ambient-icon" data-sound="chiptune" title="Chiptune" aria-label="Chiptune music">
+        <button class="ambient-icon" data-sound="chiptune" title="Chiptune Music — Lively, energetic 8-bit vibes" aria-label="Chiptune music (lively)">
             <span class="icon-glyph" aria-hidden="true">🎮</span>
         </button>
     </div>
 
-    <div class="ambient-label"> Click Coffee or Gamepad to change ambient sound</div>
-<button class="ambient-play-btn" id="play-coffee-btn" style="margin-top:0.5rem;padding:0.25rem 0.5rem;background:var(--accent-primary);color:var(--bg-primary);border:none;border-radius:4px;cursor:pointer;">Play Coffee Ambience</button>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      
-      setTimeout(function() {
-        var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
-        if (coffeeBtn) {
-          coffeeBtn.click();
-        }
-      }, 1000);
-
-      
-      var playBtn = document.getElementById('play-coffee-btn');
-      if (playBtn) {
-        playBtn.addEventListener('click', function() {
-          var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
-          if (coffeeBtn) coffeeBtn.click();
-        });
-      }
-
-      
-      var coffeeStarted = false;
-      function startCoffeeOnInteraction() {
-        if (coffeeStarted) return;
-        coffeeStarted = true;
-        var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
-        if (coffeeBtn) coffeeBtn.click();
-        
-        document.removeEventListener('click', startCoffeeOnInteraction);
-        document.removeEventListener('keydown', startCoffeeOnInteraction);
-        document.removeEventListener('touchstart', startCoffeeOnInteraction);
-        document.removeEventListener('scroll', startCoffeeOnInteraction);
-      }
-      document.addEventListener('click', startCoffeeOnInteraction);
-      document.addEventListener('keydown', startCoffeeOnInteraction);
-      document.addEventListener('touchstart', startCoffeeOnInteraction);
-      document.addEventListener('scroll', startCoffeeOnInteraction);
-    });
-    </script>
+    <div class="ambient-label">
+        <span class="ambient-text" aria-live="polite">🎵 Click ☕ for calm ambience or 🎮 for lively chiptune</span>
+    </div>
 
     <div class="volume-container">
         <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="0.4" aria-label="Ambient sound volume">
@@ -333,8 +312,7 @@ etc.</li>
         </div>
     </div>
 </div>
-    
 
-    <script src="http://localhost:1315/js/main.js"></script>
+    <script src="http://localhost:1313/game-dev-portfolio/js/main.js"></script>
 </body>
 </html>

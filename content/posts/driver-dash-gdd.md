@@ -96,5 +96,3 @@ Pick up cargo → deliver to NPC → maintain cargo quality → have fun driving
 - [ ] Vertical slice: 1 district, 3 cargo types, 5 deliveries
 
 ---
-
-*Last updated: {{ .Date.Format "2006-01-02" }}*

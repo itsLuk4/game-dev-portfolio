@@ -3,55 +3,17 @@
         <button class="mute-toggle muted" title="Toggle ambient sounds" aria-label="Toggle ambient sounds">
             <span class="icon-glyph" aria-hidden="true">🔇</span>
         </button>
-        <button class="ambient-icon" data-sound="coffee" title="Coffee Shop Ambience" aria-label="Coffee shop ambience">
+        <button class="ambient-icon" data-sound="coffee" title="Coffee Shop Ambience — Calm, cozy background" aria-label="Coffee shop ambience (calm)">
             <span class="icon-glyph" aria-hidden="true">☕</span>
         </button>
-        <button class="ambient-icon" data-sound="chiptune" title="Chiptune" aria-label="Chiptune music">
+        <button class="ambient-icon" data-sound="chiptune" title="Chiptune Music — Lively, energetic 8-bit vibes" aria-label="Chiptune music (lively)">
             <span class="icon-glyph" aria-hidden="true">🎮</span>
         </button>
     </div>
 
-    <div class="ambient-label"> Click Coffee or Gamepad to change ambient sound</div>
-<button class="ambient-play-btn" id="play-coffee-btn" style="margin-top:0.5rem;padding:0.25rem 0.5rem;background:var(--accent-primary);color:var(--bg-primary);border:none;border-radius:4px;cursor:pointer;">Play Coffee Ambience</button>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Auto-try to start coffee after 1s (may be blocked by browser)
-      setTimeout(function() {
-        var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
-        if (coffeeBtn) {
-          coffeeBtn.click();
-        }
-      }, 1000);
-
-      // Fallback button click handler
-      var playBtn = document.getElementById('play-coffee-btn');
-      if (playBtn) {
-        playBtn.addEventListener('click', function() {
-          var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
-          if (coffeeBtn) coffeeBtn.click();
-        });
-      }
-
-      // Start coffee on first user interaction (click, keydown, touch, scroll)
-      var coffeeStarted = false;
-      function startCoffeeOnInteraction() {
-        if (coffeeStarted) return;
-        coffeeStarted = true;
-        var coffeeBtn = document.querySelector('.ambient-icon[data-sound="coffee"]');
-        if (coffeeBtn) coffeeBtn.click();
-        // Remove listeners after first interaction
-        document.removeEventListener('click', startCoffeeOnInteraction);
-        document.removeEventListener('keydown', startCoffeeOnInteraction);
-        document.removeEventListener('touchstart', startCoffeeOnInteraction);
-        document.removeEventListener('scroll', startCoffeeOnInteraction);
-      }
-      document.addEventListener('click', startCoffeeOnInteraction);
-      document.addEventListener('keydown', startCoffeeOnInteraction);
-      document.addEventListener('touchstart', startCoffeeOnInteraction);
-      document.addEventListener('scroll', startCoffeeOnInteraction);
-    });
-    </script>
+    <div class="ambient-label">
+        <span class="ambient-text" aria-live="polite">🎵 Click ☕ for calm ambience or 🎮 for lively chiptune</span>
+    </div>
 
     <div class="volume-container">
         <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="{{ .Site.Params.ambient_sounds.default_volume }}" aria-label="Ambient sound volume">

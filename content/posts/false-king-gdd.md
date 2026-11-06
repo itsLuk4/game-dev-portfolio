@@ -98,5 +98,3 @@ Traverse levels door-to-door, defeat pig enemies, collect diamonds, reach the fi
 - [ ] Vertical slice: 1 complete level with score
 
 ---
-
-*Last updated: {{ .Date.Format "2006-01-02" }}*

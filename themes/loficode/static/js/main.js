@@ -64,6 +64,55 @@
     });
   }
 
+  // Mobile menu toggle (hamburger)
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenuToggle.classList.toggle("active");
+      navLinks.classList.toggle("active", isOpen);
+      mobileMenuToggle.setAttribute("aria-expanded", isOpen);
+
+      // Close search if open
+      const searchForm = document.getElementById("searchForm");
+      if (searchForm && searchForm.classList.contains("active")) {
+        searchForm.classList.remove("active");
+      }
+    });
+
+    // Close mobile menu when a nav link is clicked
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        mobileMenuToggle.classList.contains("active") &&
+        !mobileMenuToggle.contains(e.target) &&
+        !navLinks.contains(e.target)
+      ) {
+        mobileMenuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Close mobile menu on window resize (if resized to desktop)
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) {
+        mobileMenuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   // Reading progress (for blog posts)
   const readingProgress = document.querySelector(".reading-progress");
   if (readingProgress) {
@@ -94,7 +143,7 @@
   // Ambient sound controls
   const muteToggle = document.querySelector(".mute-toggle");
   const ambientIcons = document.querySelectorAll(".ambient-icon");
-  const ambientLabel = document.querySelector(".ambient-label");
+  const ambientText = document.querySelector(".ambient-text");
   const volumeSlider = document.querySelector(".volume-slider");
   const equalizer = document.querySelector(".equalizer");
 
@@ -109,7 +158,7 @@
 };
 
   function updateAmbientState() {
-    if (!muteToggle || !ambientLabel || !equalizer) return;
+    if (!muteToggle || !ambientText || !equalizer) return;
 
     const muteIcon = muteToggle.querySelector("i");
 
@@ -120,7 +169,7 @@
       }
       muteToggle.title = "Mute ambient sounds";
       equalizer.classList.remove("muted");
-      ambientLabel.textContent = `Playing: ${sounds[currentSound].name}`;
+      ambientText.textContent = `🎵 Now Playing: ${sounds[currentSound].name}`;
     } else {
       muteToggle.classList.add("muted");
       if (muteIcon) {
@@ -129,9 +178,9 @@
       muteToggle.title = "Play ambient sounds";
       equalizer.classList.add("muted");
       if (currentSound) {
-        ambientLabel.textContent = `Paused: ${sounds[currentSound].name}`;
+        ambientText.textContent = `⏸ Paused: ${sounds[currentSound].name}`;
       } else {
-        ambientLabel.textContent = "Click to start ambient sounds";
+        ambientText.textContent = "🎵 Click ☕ for calm ambience or 🎮 for lively chiptune";
       }
     }
   }
@@ -150,8 +199,8 @@
       // Handle loading errors gracefully
       audio.addEventListener("error", () => {
         console.log(`Could not load ${soundType} audio file`);
-        if (ambientLabel) {
-          ambientLabel.textContent = `${sounds[soundType].name} not available`;
+        if (ambientText) {
+          ambientText.textContent = `${sounds[soundType].name} not available`;
         }
         // Remove the audio element from cache so it doesn't try again
         delete audioElements[soundType];
@@ -177,8 +226,8 @@
       });
     } catch (error) {
       console.log(`Error loading ${soundType} audio:`, error);
-      if (ambientLabel) {
-        ambientLabel.textContent = `${sounds[soundType].name} not available`;
+      if (ambientText) {
+        ambientText.textContent = `${sounds[soundType].name} not available`;
       }
       return null;
     }
@@ -249,16 +298,16 @@
             // Audio file not available
             isPlaying = false;
             currentSound = null;
-            if (ambientLabel) {
-              ambientLabel.textContent = `${sounds[soundType].name} not available`;
-            }
+            if (ambientText) {
+          ambientText.textContent = `${sounds[soundType].name} not available`;
+        }
           }
         } catch (e) {
           console.log("Could not load or play audio:", e);
           isPlaying = false;
           currentSound = null;
-          if (ambientLabel) {
-            ambientLabel.textContent = `${sounds[soundType].name} not available`;
+          if (ambientText) {
+            ambientText.textContent = `${sounds[soundType].name} not available`;
           }
         }
       }
@@ -324,21 +373,45 @@
       audio.currentTime = saved.time || 0;
 
       if (saved.playing) {
+        // Try to auto-play - will succeed if browser allows (media engagement, user gesture, etc.)
+        // If blocked, catch handles it gracefully
         await audio.play();
         isPlaying = true;
         const icon = document.querySelector(`[data-sound="${saved.sound}"]`);
         if (icon) icon.classList.add("active");
+      } else {
+        // Was paused, just prepare audio
+        isPlaying = false;
+        const icon = document.querySelector(`[data-sound="${saved.sound}"]`);
+        if (icon) icon.classList.remove("active");
       }
     } catch (e) {
-      // The browser may block autoplay; the play button still works
-      console.log("Could not resume audio automatically:", e);
+      // Browser blocked autoplay - prepare audio but don't play
+      console.log("Autoplay blocked, audio ready to resume:", e);
       isPlaying = false;
+      const icon = document.querySelector(`[data-sound="${saved.sound}"]`);
+      if (icon) icon.classList.remove("active");
     }
 
     updateAmbientState();
   }
 
+  // Save audio state on multiple events for reliability
   window.addEventListener("pagehide", saveAudioState);
+  window.addEventListener("beforeunload", saveAudioState);
+  window.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      saveAudioState();
+    }
+  });
+
+  // Also save state periodically while playing (every 5 seconds)
+  setInterval(() => {
+    if (isPlaying && currentSound) {
+      saveAudioState();
+    }
+  }, 5000);
+
   restoreAudioState();
 
   // Copy code functionality for shortcodes
@@ -876,8 +949,8 @@
     audio.addEventListener("error", () => {
       hideLoadingState(soundType);
       console.log(`Could not load ${soundType} audio file`);
-      if (ambientLabel) {
-        ambientLabel.textContent = `${sounds[soundType].name} not available`;
+      if (ambientText) {
+        ambientText.textContent = `${sounds[soundType].name} not available`;
       }
     });
 
@@ -1671,10 +1744,10 @@
 
     updateOverlayAmbientState(overlay) {
       const overlayMuteToggle = overlay.querySelector(".mute-toggle");
-      const overlayAmbientLabel = overlay.querySelector(".ambient-label");
+      const overlayAmbientText = overlay.querySelector(".ambient-text");
       const overlayEqualizer = overlay.querySelector(".equalizer");
 
-      if (!overlayMuteToggle || !overlayAmbientLabel || !overlayEqualizer) return;
+      if (!overlayMuteToggle || !overlayAmbientText || !overlayEqualizer) return;
 
       const muteIcon = overlayMuteToggle.querySelector("i");
 
@@ -1685,7 +1758,7 @@
         }
         overlayMuteToggle.title = "Mute ambient sounds";
         overlayEqualizer.classList.remove("muted");
-        overlayAmbientLabel.textContent = `Playing: ${sounds[currentSound].name}`;
+        overlayAmbientText.textContent = `🎵 Now Playing: ${sounds[currentSound].name}`;
       } else {
         overlayMuteToggle.classList.add("muted");
         if (muteIcon) {
@@ -1694,9 +1767,9 @@
         overlayMuteToggle.title = "Play ambient sounds";
         overlayEqualizer.classList.add("muted");
         if (currentSound) {
-          overlayAmbientLabel.textContent = `Paused: ${sounds[currentSound].name}`;
+          overlayAmbientText.textContent = `⏸ Paused: ${sounds[currentSound].name}`;
         } else {
-          overlayAmbientLabel.textContent = "Click to start ambient sounds";
+          overlayAmbientText.textContent = "🎵 Click ☕ for calm ambience or 🎮 for lively chiptune";
         }
       }
     }
@@ -1943,4 +2016,15 @@
     Built with love, coffee, and way too many interruptions.
     Happy coding! ✨
     `);
+
+// Ensure mailto links work properly
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href^="mailto:"]');
+    if (link) {
+        // Allow default behavior for mailto links
+        // Ensure they work properly
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+    }
+}, true);
 })();

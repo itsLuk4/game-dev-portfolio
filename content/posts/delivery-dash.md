@@ -8,7 +8,8 @@ tags: ["game", "portfolio", "unity", "arcade", "racing", "casual"]
 categories: ["games"]
 featured: true
 mood: "🚀 In Development"
-coverImage: "images/delivery-dash-cover.jpg"
+coverImage: "images/DriverDash/DriveCover.png"
+coverStyle: "background"
 platform: ["PC", "Mobile"]
 engine: "Unity"
 genre: ["Arcade", "Racing", "Casual"]

@@ -148,6 +148,238 @@ body {
     }
 }
 
+/* General Link Styles - Works in both Light and Dark modes */
+a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--accent-secondary);
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Links in tables (like Contact page) - consistent color, no visited state */
+table a {
+    color: var(--accent-primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-primary);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Override visited state for table links - keep consistent color */
+table a:visited {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+}
+
+table a:hover {
+    color: var(--accent-secondary);
+    border-bottom-color: var(--accent-secondary);
+    text-decoration: none;
+}
+
+/* Ensure visited links are also visible (for non-table links) */
+a:visited {
+    color: var(--accent-tertiary);
+}
+
+a:visited:hover {
+    color: var(--accent-secondary);
+}
+
+/* Post Cover Image Styles */
+.post-cover-image {
+    margin: 2rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow-color);
+}
+
+.post-cover-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post-cover-image:hover img {
+    transform: scale(1.02);
+}
+
+/* Post Cover Background (for background cover style) */
+.post-cover-background {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 300px;
+    max-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    border-radius: 0;
+    margin-bottom: 2rem;
+}
+
+.post-cover-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    border-radius: inherit;
+}
+
+.post-cover-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    color: white;
+    z-index: 1;
+}
+
+/* Text Readability for Background Covers */
+.has-background-cover {
+    /* Darker overlay on the background image for better text contrast */
+}
+
+.has-background-cover .post-overlay-backdrop {
+    /* Darker gradient overlay for better text readability */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.3) 30%,
+        rgba(0, 0, 0, 0.4) 60%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+/* Text shadows for better readability on background covers */
+.has-background-cover .post-title,
+.has-background-cover .post-subtitle,
+.has-background-cover .post-meta,
+.has-background-cover .post-tags-header .post-tag,
+.has-background-cover .post-body h1,
+.has-background-cover .post-body h2,
+.has-background-cover .post-body h3,
+.has-background-cover .post-body h4,
+.has-background-cover .post-body p,
+.has-background-cover .post-body li,
+.has-background-cover .post-body blockquote,
+.has-background-cover .post-body strong,
+.has-background-cover .post-body em,
+.has-background-cover .post-body code,
+.has-background-cover .post-body a,
+.has-background-cover .reading-time-post,
+.has-background-cover .post-date,
+.has-background-cover .post-tag,
+.has-background-cover .sidebar .toc a,
+.has-background-cover .toc h4,
+.has-background-cover .related-posts h3,
+.has-background-cover .related-post h4,
+.has-background-cover .related-meta,
+.has-background-cover .post-navigation .nav-label,
+.has-background-cover .post-navigation .nav-title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Lighter text colors for better contrast on dark backgrounds */
+.has-background-cover .post-title,
+.has-background-cover .post-body h1,
+.has-background-cover .post-body h2,
+.has-background-cover .post-body h3 {
+    color: #ffffff !important;
+}
+
+.has-background-cover .post-subtitle,
+.has-background-cover .post-body p,
+.has-background-cover .post-body li,
+.has-background-cover .post-body blockquote {
+    color: #f0f0f0 !important;
+}
+
+.has-background-cover .post-meta .post-date,
+.has-background-cover .reading-time-post,
+.has-background-cover .post-tag,
+.has-background-cover .post-body strong,
+.has-background-cover .post-body em,
+.has-background-cover .post-body a,
+.has-background-cover .sidebar .toc a {
+    color: #e0e0e0 !important;
+}
+
+/* Semi-transparent backgrounds for text containers */
+.has-background-cover .post-header,
+.has-background-cover .sidebar .toc {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.has-background-cover .post-header {
+    margin-bottom: 2rem;
+}
+
+/* Adjust post-body padding for better readability - similar to Contents box */
+.has-background-cover .post-body {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    padding-left: 15rem;
+    margin-bottom: 1.5rem;
+}
+
+.has-background-cover .sidebar .toc {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Push text content away from left edge */
+.has-background-cover .post-body > * {
+    margin-left: 4rem;
+}
+
+/* Slightly more push for headers */
+.has-background-cover .post-body h1,
+.has-background-cover .post-body h2,
+.has-background-cover .post-body h3,
+.has-background-cover .post-body h4 {
+    margin-left: 4.5rem !important;
+}
+
+/* Ensure links are visible on dark backgrounds */
+.has-background-cover .post-body a,
+.has-background-cover .sidebar .toc a {
+    color: var(--accent-secondary) !important;
+    text-decoration: underline;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.has-background-cover .post-body a:hover,
+.has-background-cover .sidebar .toc a:hover {
+    color: var(--accent-tertiary) !important;
+}
+
 /* Header */
 .site-header {
     background: var(--bg-secondary);
@@ -312,6 +544,92 @@ nav {
 
     .search-toggle::after, .theme-toggle::after {
         display: none;
+    }
+}
+
+/* Mobile Menu Toggle (Hamburger) */
+.mobile-menu-toggle {
+    display: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    width: 44px;
+    height: 44px;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--accent-secondary);
+    color: white;
+    border-color: var(--accent-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-color);
+}
+
+.hamburger-line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile nav-links - shown when menu is open */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 20px var(--shadow-color);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 12px;
     }
 }
 
@@ -1746,6 +2064,52 @@ pre, pre code {
 
 @media (max-width: 480px) {
     .ambient-label {
+        display: none;
+    }
+}
+
+.ambient-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    animation: ambient-hint-pulse 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.ambient-text:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-color);
+    border-color: var(--accent-secondary);
+}
+
+@keyframes ambient-hint-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px var(--shadow-color);
+        border-color: var(--border-color);
+    }
+    50% {
+        box-shadow: 0 6px 25px var(--glow-color);
+        border-color: var(--accent-primary);
+    }
+}
+
+@media (max-width: 768px) {
+    .ambient-text {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ambient-text {
         display: none;
     }
 }

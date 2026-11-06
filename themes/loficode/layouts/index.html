@@ -40,11 +40,7 @@
       >
         <span class="social-icon">in</span>
       </a>
-      {{ else if eq $name "email" }}
-      <a href="mailto:{{ $url }}" class="social-link" title="Email">
-        <span class="social-icon">@</span>
-      </a>
-      {{ else if eq $name "mastodon" }}
+            {{ else if eq $name "mastodon" }}
       <a
         href="{{ $url }}"
         target="_blank"
