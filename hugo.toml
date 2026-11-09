@@ -1,6 +1,6 @@
 baseURL = "https://itsluk4.github.io/game-dev-portfolio/"
 locale = "en-US"
-title = "Game Developer Portfolio"
+title = "Portfolio"
 theme = "loficode"
 
 enableEmoji = true
@@ -34,7 +34,7 @@ enableEmoji = true
   default_volume = 0.4
 
 [params.author]
-  name = "Your Name"
+  name = "Luka Živko"
   image = "images/profile.png"
 
 [params.social]

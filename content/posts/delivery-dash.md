@@ -23,7 +23,7 @@ github: ""
 
 ## Overview
 
-**Delivery Dash** is a fast-paced arcade delivery game where players race through procedurally generated city streets, dodging traffic, navigating shortcuts, and managing their delivery route efficiency. Think *Crazy Taxi* meets *Paperboy* with a modern mobile-friendly control scheme.
+Delivery Dash is a fast-paced arcade delivery game where the player drives through the city streets, and makes deliveries.
 
 ## Gallery
 

@@ -71,30 +71,10 @@ Traverse levels door-to-door, defeat pig enemies, collect diamonds, reach the fi
 
 ---
 
-## Stats Snapshot
-| Metric | Target |
-|--------|--------|
-| **Session Length** | 3–5 min per level |
-| **Enemy Types (MVP)** | 3 (Walker, Charger, Thrower) |
-| **Trap Types (MVP)** | 4 (Spikes, Pit, Blade, Crumble) |
-| **Levels (MVP)** | 5–8 |
-| **Core Mechanics** | Jump, Dash, Hammer Swing, Diamond Collect |
-| **Platform** | Web (GitHub Pages), PC |
-| **Engine** | Unity 2D URP → WebGL |
-
----
-
 ## Platform & Deployment
 - **Primary:** GitHub Pages (WebGL build via Unity)
-- **Secondary:** itch.io
 - **Scope:** Portfolio showcase — free, no monetization
 
 ---
-
-## Next Steps
-- [ ] Prototype player movement (jump, dash, hammer)
-- [ ] Implement enemy AI (walker, charger)
-- [ ] Build first level with traps & diamonds
-- [ ] Vertical slice: 1 complete level with score
 
 ---

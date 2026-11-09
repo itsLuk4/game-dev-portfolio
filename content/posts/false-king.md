@@ -60,22 +60,6 @@ As **Gameplay Programmer & Designer**, I:
 
 *Engagement from tight platforming, satisfying combat, and score chasing.*
 
-## Tech Stack
-
-- **Engine:** Unity 2022 LTS (2D URP)
-- **Language:** C#
-- **CI/CD:** GitHub Actions → GitHub Pages deploy
-
-## Progress
-
-- ✅ Player movement (jump, dash)
-- ✅ Hammer attack with hit‑pause
-- 🟡 Enemy AI (walker)
-- 🟡 Trap set (bomb)
-- 🟡 Diamond scoring & UI
-- ⏳ Level design (1–3 levels)
-- ⏳ Visual polish & VFX
-
 ## Design Docs
 
 - [Game Design Document](/categories/design-docs/false-king-gdd/) — *Concept complete*
