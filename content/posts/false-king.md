@@ -2,7 +2,7 @@
 title: "False King 2D"
 date: 2025-11-01
 draft: false
-description: "An arcade platformer where you jump, swing a hammer, collect diamonds, and survive traps to reclaim your cursed castle."
+description: "An arcade platformer where you jump, swing a hammer, collect diamonds, and survive bombs to reclaim your cursed castle."
 subtitle: "Gameplay Programmer & Designer"
 tags: ["game", "portfolio", "platform", "arcade", "2d"]
 categories: ["games"]
@@ -23,7 +23,7 @@ github: ""
 
 ## Overview
 
-**False King 2D** is an arcade platformer where you play as the rightful heir — cursed by Lord Pigsturr, your arch‑nemesis, who turned the entire castle into mindless, aggressive pigs. Jump, dash, swing your hammer, collect diamonds, and survive traps to reclaim your castle and lift the curse.
+**False King 2D** is an arcade platformer where you play as the rightful heir — cursed by Lord Pigsturr, your arch‑nemesis, who turned the entire castle into mindless, aggressive pigs. Jump, dash, swing your hammer, collect diamonds, and survive bombs to reclaim your castle and lift the curse.
 
 ## Gallery
 
@@ -56,7 +56,7 @@ As **Gameplay Programmer & Designer**, I:
 
 ## Core Loops
 
-1. **Enter Level** → 2. **Jump & Dash** → 3. **Hammer Enemies** → 4. **Collect Diamonds** → 5. **Avoid Traps** → 6. **Reach Door** → **Score & Next Level**
+1. **Enter Level** → 2. **Jump & Dash** → 3. **Hammer Enemies** → 4. **Collect Diamonds** → 5. **Avoid Bombs** → 6. **Reach Door** → **Score & Next Level**
 
 *Engagement from tight platforming, satisfying combat, and score chasing.*
 

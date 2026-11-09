@@ -19,7 +19,7 @@ categories: ["design-docs"]
 **False King 2D**
 
 ### Concept Statement
-An arcade platformer where you jump, swing a hammer, collect diamonds, and survive traps to reclaim your cursed castle.
+An arcade platformer where you jump, swing a hammer, collect diamonds, and survive bombs to reclaim your cursed castle.
 
 ### Genre
 **Arcade / Platform**
@@ -32,7 +32,7 @@ Players who enjoy short arcade sessions. Any age and gender.
 |-------|-------------|
 | **Hammer Combat** | Swing hammer to defeat pig enemies |
 | **Diamond Pickups** | Collect diamonds for score |
-| **Traps** | Spikes, pits, moving hazards |
+| **Traps** | Bombs |
 | **Enemy Variety** | Different pig behaviors |
 
 ---
@@ -57,7 +57,7 @@ Traverse levels door-to-door, defeat pig enemies, collect diamonds, reach the fi
 ---
 
 ## Core Loops
-1. **Enter Level** → 2. **Jump & Dash** → 2. **Hammer Enemies** → 3. **Collect Diamonds** → 3. **Avoid Traps** → 4. **Reach Door** → 4. **Score & Next Level**
+1. **Enter Level** → 2. **Jump & Dash** → 2. **Hammer Enemies** → 3. **Collect Diamonds** → 3. **Avoid Bombs** → 4. **Reach Door** → 4. **Score & Next Level**
 
 *Engagement from tight platforming, satisfying hammer hits, and score chasing.*
 
@@ -65,7 +65,7 @@ Traverse levels door-to-door, defeat pig enemies, collect diamonds, reach the fi
 
 ## Interactivity
 - **Enemies** (pigs) patrol, charge, or throw projectiles
-- **Traps**: spikes, pits, moving blades, crumbling platforms
+- **Traps**: bombs
 - **Diamonds** scattered; some hidden in risky spots
 - **Doors** act as level finish lines
 
